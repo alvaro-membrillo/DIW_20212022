@@ -4,6 +4,7 @@
 
 ul {
     background-color: yellow;
+    color: red;
     border-radius: 1em;
     box-shadow: 0.5em 1em 1em 1px blue;
 }
@@ -12,4 +13,16 @@ ul li:hover {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+ul li:first-child::first-letter {
+    text-decoration: overline;
+    font-size: 2em;
+    color: blue;
+}
+
+ul li:last-child::first-letter {
+    text-decoration: overline;
+    font-size: 2em;
+    color: green;
 }
