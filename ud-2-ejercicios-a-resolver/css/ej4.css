@@ -1,0 +1,76 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+.fondo {
+    box-shadow: 1em 0.5em gray;
+    background-color: black;
+}
+
+div {
+    margin: 2em;
+    padding: 0.25em 1em 1.5em 2em;
+    background-color: lightgreen;
+    border-radius: 1.5em;
+}
+
+div h2 {
+    text-align: center;
+}
+
+div label {
+    font-weight: bold;
+}
+
+div .fechaIdiomas {
+    display: inline-block;
+}
+
+div .left {
+    float: left;
+    display: inline;
+}
+
+div .right {
+    float: right;
+    display: inline;
+}
+
+div .sugerenciasYrespuesta {
+    float: right;
+    display: inline;
+}
+
+div .sugerenciasYrespuesta label {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div .sugerenciasYrespuesta textarea {
+    resize: none;
+    width: 100%;
+}
+
+div .boton {
+    margin: 2em;
+}
+
+div input {
+    font-style: italic;
+}
+
+div #boton {
+    margin: 0px auto;
+    display: block;
+    width: 12em;
+    height: 2em;
+    font-style: normal;
+    background-color: orange;
+}
+
+div #boton:hover {
+    background-color: darkorange;
+    color: white;
+}

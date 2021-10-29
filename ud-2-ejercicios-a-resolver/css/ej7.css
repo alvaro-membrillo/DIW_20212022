@@ -1,0 +1,38 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+div ul {
+    list-style-type: none;
+}
+
+div .home {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+div .home li::before {
+    /*Para el home*/
+    content: "🏠";
+}
+
+div ul li::before {
+    content: "📂";
+}
+
+div ul li.opcion::before {
+    content: "📂";
+}
+
+div ul li ul li::before {
+    content: "📋";
+}
+
+div li a {
+    text-decoration: none;
+}
+
+div li a:hover {
+    background-color: lightgreen;
+}
