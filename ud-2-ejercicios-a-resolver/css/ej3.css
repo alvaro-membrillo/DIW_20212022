@@ -1,0 +1,44 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    /*Titulo*/
+    caption-side: top;
+    font-size: 2em;
+    color: red;
+    letter-spacing: 0.10em;
+    text-align: center;
+}
+
+table {
+    /*Para colapsar los bordes*/
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 75%;
+}
+
+table tr td {
+    /*Para los bordes que hay entre todas las celdas*/
+    border: 2px solid #84A8D4;
+    padding: 0.5em;
+}
+
+tr:nth-child(odd) {
+    /*Para cambiar el color de las filas pares*/
+    background-color: #B8D0EC;
+}
+
+tr:nth-child(even) {
+    /*Para cambiar el color de las filas pares*/
+    background-color: #D9E5F3;
+}
+
+table tr th {
+    /*Para cambiar el color de la fila cabecera de la tabla*/
+    border: 3px solid green;
+}
+
+table tr td:hover {
+    background-color: orange;
+}

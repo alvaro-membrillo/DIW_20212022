@@ -1,0 +1,39 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    /*Colapsamos todas las celdas de la tabla y ajustamos el margen*/
+    border-collapse: collapse;
+    margin: 3em 0 0 5em;
+}
+
+table tr>* {
+    /*Añadimos borde a todas las celdas de la tabla*/
+    border: 2px black solid;
+}
+
+table tr:first-child th {
+    /*primera fila*/
+    background-color: #E7E7E7;
+    text-align: center;
+}
+
+table tr th {
+    /*Para añadir un fondo diferente a la primera columna y alinear el texto a la izquierda*/
+    background-color: #E3F4FD;
+    text-align: left;
+}
+
+table tr td {
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    /*Cambiar el color a las filas impares de la tabla*/
+    background-color: #FCF7BF;
+}
+
+table tr td:hover {
+    background-color: #407FC0;
+}
