@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrabble</title>
+  <link rel="stylesheet" href="juego.css" />
+</head>
+
+<body>
+  <!--Scrabble-->
+  <div class="container-flex">
+    <h1 id="titulo">SCRABBLE</h1>
+
+
+    <!--Fichas que tiene el jugador-->
+    <h2>Fichas del jugador</h2>
+    <div class="fichas">
+      <div id="ficha" draggable="true">O</div>
+      <div id="ficha" draggable="true">X</div>
+      <div id="ficha" draggable="true">T</div>
+      <div id="ficha" draggable="true">A</div>
+      <div id="ficha" draggable="true">P</div>
+    </div>
+
+    <script>
+      const ficha = document.querySelector("#ficha");
+
+      const contenedor = document.querySelector("#casilla");
+
+      contenedor.addeventListener("dragover", e => {
+        //Para prevenir que el navegador priorice el dragover por encima del drop
+        e.preventDefault();
+        console.log("Drag over");
+      })
+
+      contenedor.addeventListener("drop", e => {
+        console.log("Drop");
+        contenedor.appendChild(ficha);
+      })
+
+    </script>
+
+    <div class="tablero">
+      <!--PRIMERA FILA-->
+      <div class="casilla"></div>
+      <div class="casilla">H</div>
+      <div class="casilla">O</div>
+      <div class="casilla">L</div>
+      <div class="casilla">A</div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <!--SEGUNDA FILA-->
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla">D</div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <!--TERCERA FILA-->
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla">I</div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <!--CUARTA FILA-->
+      <div class="casilla">L</div>
+      <div class="casilla">I</div>
+      <div class="casilla">B</div>
+      <div class="casilla">R</div>
+      <div class="casilla">O</div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <!--QUINTA FILA-->
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla">O</div>
+      <div class="casilla">S</div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <!--SEXTA FILA-->
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla">S</div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <!--SÉPTIMA FILA-->
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla">A</div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <!--OCTAVA FILA-->
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <!--NOVENA FILA-->
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <!--DÉCIMA FILA-->
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+  </div>
+
+  <footer>Álvaro-Membrillo Pérez, 2ºDAW</footer>
+</body>
+
+</html>

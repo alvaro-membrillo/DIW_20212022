@@ -1,0 +1,34 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    grid-gap: 0.25rem 0.25rem;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+div:nth-child() {
+    background-color: red;
+    box-shadow: 0px 0px 10px black;
+    border: 1px solid black;
+    color: white;
+}
+
+.grid-item {
+    background-color: red;
+    box-shadow: 0px 0px 10px black;
+    border: 1px solid black;
+    color: white;
+    padding: 5px 0px 5px 0px;
+}
+
+.header, .footer {
+    opacity: 50%;
+    text-shadow: 2px 2px black;
+    grid-column: 1 / span 3;
+}

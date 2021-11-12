@@ -1,0 +1,58 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(224, 224, 158);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#titulo {
+  font-size: 3rem;
+  color: white;
+  background-color: green;
+  border-radius: 2rem;
+  text-shadow: 3px 3px black;
+  text-align: center;
+}
+
+.fichas {
+  margin-bottom: 2rem;
+  height: 7rem;
+  background: brown;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.fichas div {
+  background: lightgreen;
+  width: 5%;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.fichas div:hover {
+  box-shadow: 0 0 1rem black;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-gap: 1.5px 1.5px;
+  gap: 0.5rem;
+  color: lightgreen;
+}
+
+.casilla {
+  text-align: center;
+  background: green;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: orange;
+}

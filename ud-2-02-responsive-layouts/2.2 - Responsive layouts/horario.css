@@ -1,0 +1,51 @@
+* {
+    font-family: arial, helvetica, sans-serif;
+}
+
+.flex-container {
+    border: 1px solid purple;
+    box-shadow: 0.5rem 0.5rem darkgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.item9 {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+div div {
+    background-color: gray;
+}
+
+.columna div {
+    height: 3.5rem;
+}
+
+.header {
+    background-color: #3F3F3F;
+    color: white;
+    font-weight: bold;
+}
+
+/*------------COLORES-------------*/
+
+.rojo {
+    background-color: red;
+    color: white;
+}
+
+.amarillo {
+    background-color: #FDC034;
+    color: white;
+}
+
+.azul {
+    background-color: #1DB5F1;
+    color: white;
+}
+
+/***********************************/
