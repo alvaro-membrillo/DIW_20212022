@@ -1,0 +1,90 @@
+<!--
+ ______________________________________________________________________________
+/\                                                                             \
+\_|                                                                            |
+  |    _____         .__                      .__                              |
+  |   /  _  \   ____ |__| _____ _____    ____ |__| ____   ____   ____   ______ |
+  |  /  /_\  \ /    \|  |/     \\__  \ _/ ___\|  |/  _ \ /    \_/ __ \ /  ___/ |
+  | /    |    \   |  \  |  Y Y  \/ __ \\  \___|  (  <_> )   |  \  ___/ \___ \  |
+  | \____|__  /___|  /__|__|_|  (____  /\___  >__|\____/|___|  /\___  >____  > |
+  |         \/     \/         \/     \/     \/               \/     \/     \/  |
+  |  __________________________________________________________________________|_ 
+  \_/___________________________________________________________________________/
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones Web</title>
+    <script>
+        function cargaContextoCanvas(idCanvas) {
+            var contexto = false, elemento = document.getElementById(idCanvas);
+            if (elemento && elemento.getContext)
+                contexto = elemento.getContext('2d');
+
+            return contexto;
+        }
+
+        window.onload = function () {
+            const x = 145;
+            const y = 250;
+
+            var contexto = cargaContextoCanvas('canvas1');
+            if (contexto) {
+                //Accedo al contexto de '2d' de este canvas, necesario para dibujar
+                contexto.fillStyle = "red";
+                contexto.beginPath();
+                contexto.moveTo(50, 5);
+                contexto.lineTo(75, 65);
+                contexto.lineTo(50, 125);
+                contexto.lineTo(25, 65);
+                contexto.fill();
+                contexto.closePath();
+
+                contexto.beginPath(50);
+                contexto.moveTo(50+x, 5);
+                contexto.lineTo(75+x, 65);
+                contexto.lineTo(50+x, 125);
+                contexto.lineTo(25+x, 65);
+                contexto.fill();
+                contexto.closePath();
+
+                contexto.beginPath();
+                contexto.moveTo(50, 5+y);
+                contexto.lineTo(75, 65+y);
+                contexto.lineTo(50, 125+y);
+                contexto.lineTo(25, 65+y);
+                contexto.fill();
+                contexto.closePath();
+
+                contexto.beginPath();
+                contexto.moveTo(50+x, 5+y);
+                contexto.lineTo(75+x, 65+y);
+                contexto.lineTo(50+x, 125+y);
+                contexto.lineTo(25+x, 65+y);
+                contexto.fill();
+                contexto.closePath();
+            }
+
+        }
+    </script>
+    <style>
+        #canvas1 {
+            border: 2px solid black;
+            border-radius: 1rem;
+            box-shadow: 0.25rem .25rem black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas1" height="400" width="250">
+        Tu navegador no sirve
+    </canvas>
+</body>
+
+</html>

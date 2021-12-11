@@ -1,0 +1,86 @@
+<!--
+ ______________________________________________________________________________
+/\                                                                             \
+\_|                                                                            |
+  |    _____         .__                      .__                              |
+  |   /  _  \   ____ |__| _____ _____    ____ |__| ____   ____   ____   ______ |
+  |  /  /_\  \ /    \|  |/     \\__  \ _/ ___\|  |/  _ \ /    \_/ __ \ /  ___/ |
+  | /    |    \   |  \  |  Y Y  \/ __ \\  \___|  (  <_> )   |  \  ___/ \___ \  |
+  | \____|__  /___|  /__|__|_|  (____  /\___  >__|\____/|___|  /\___  >____  > |
+  |         \/     \/         \/     \/     \/               \/     \/     \/  |
+  |  __________________________________________________________________________|_ 
+  \_/___________________________________________________________________________/
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animaciones Web</title>
+	<style>
+		* {
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		body {
+			font-size: 12pt;
+		}
+
+		nav {
+			margin-top: 20px;
+			padding: 20px 0px 40px 0px;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		li {
+			/* Márgenes */
+			margin-right: 10px;
+
+			/* Rellenos */
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		li {
+			color: rgb(100%, 100%, 100%);
+			background-color: #FF0000;
+			border-radius: 10px 10px 10px 10px;
+
+			/* Visualización en línea y en bloque */
+			/* Sólo ocupa el espacio necesario */
+			display: inline-block;
+
+			/* Tiempo para aplicar la transformación: 2 segundos */
+			transition: all 2s;
+		}
+
+		li:hover {
+			box-shadow: 0 0 10px 0 #000000;
+			background-color: #0000FF;
+			cursor: pointer;
+
+			/* Transformación de tipo: rotación */
+			transform: rotate(-15deg);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li>Inicio</li>
+			<li>Productos</li>
+			<li>Catálogo</li>
+			<li>Contacto</li>
+		</ul>
+	</nav>
+</body>
+
+</html>

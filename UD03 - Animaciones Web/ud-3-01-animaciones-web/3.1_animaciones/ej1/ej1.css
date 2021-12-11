@@ -1,0 +1,183 @@
+* {
+  color: greenyellow;
+  font-family: "Audiowide", cursive;
+  margin: 0 0;
+}
+
+body {
+  background-color: rgb(87, 87, 77);
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, auto);
+  width: 85%;
+  margin: 0 auto;
+  height: 86%;
+
+  grid-template-rows: auto auto auto;
+  background-color: black;
+  border: 3px solid lightgreen;
+}
+
+header {
+  border: 1px solid white;
+  height: 2.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+div div {
+  border: 2px solid green;
+  color: red;
+}
+
+/*1 - Tesla*/
+div div:nth-child(1) {
+  grid-row: 1/3;
+  background-image: url(img/tesla.jpg);
+  background-position-y: 15%;
+  animation: tesla 8s infinite;
+}
+
+@keyframes tesla {
+  50% {
+    background-position-x: 80%;
+  }
+
+  75% {
+    background-position-y: 40%;
+  }
+
+  100% {
+    background-position-x: 0%;
+  }
+}
+
+/*2 - crypto*/
+div div:nth-child(2) {
+  background-position: 50%;
+  background-image: url(img/cryptoCoins.jpg);
+  animation: crypto 5s infinite alternate;
+}
+
+@keyframes crypto {
+  to {
+    opacity: 5%;
+  }
+}
+
+/*3 - 5g*/
+div div:nth-child(3) {
+  grid-column: 3/5;
+  background-image: url(img/5g.png);
+  background-position-x: 50%;
+  background-position-y: 100%;
+  animation: cincoG 4s infinite;
+}
+
+@keyframes cincoG {
+  to {
+    background-position-y: 25%;
+  }
+}
+
+/*4 - robodog*/
+div div:nth-child(4) {
+  grid-row: 2/4;
+  /*background-image: url(img/bostonDynamicsDog.webp);*/
+  /*background-image: url(img/bostonDynamicsDog.jpg);*/
+  background-image: url(img/spacexRocket.jpg);
+  background-position-x: 75%;
+  animation: rocket 10s infinite;
+}
+
+@keyframes rocket {
+  to {
+    background-position-x: 50%;
+    background-position-y: 100%;
+    background-image: url(img/musk.png);
+    background-repeat: no-repeat;
+  }
+}
+
+/*4 */
+div div:nth-child(5) {
+  background-image: url(img/watch.png);
+  animation: fold 5s infinite;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+}
+
+@keyframes fold {
+  50% {
+    background-image: url(img/laptop.png);
+  }
+
+  100% {
+    background-image: url(img/qcy.png);
+  }
+}
+
+/*5*/
+div div:nth-child(6) {
+  /*grid-row: 3/5;*/
+  background-image: url(img/realidadVirtual.jpg);
+  background-position-y: 100%;
+  animation: virtual 4s infinite;
+}
+
+@keyframes virtual {
+  to {
+    background-position-y: 15%;
+  }
+}
+
+/*6*/
+div div:nth-child(7) {
+  background-image: url(img/robot.jpg);
+  background-position-x: 55%;
+  background-position-y: 100%;
+  animation: robot 4s infinite alternate;
+}
+
+@keyframes robot {
+  to {
+    background-position-y: 10%;
+  }
+}
+
+/*7*/
+div div:nth-child(8) {
+  grid-column: 3/5;
+  /*background-image: url(img/bostonDynamicsDog.webp);*/
+  background-image: url(img/bostonDynamicsDog.png);
+  opacity: 0;
+  animation: dog 5s infinite alternate;
+  background-repeat: no-repeat;
+}
+
+@keyframes dog {
+  to {
+    opacity: 1;
+    background-position-y: 80%;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  div div:first-child {
+    grid-row: 2/4;
+  }
+
+  div div:nth-child(3) {
+    grid-row: 1/2;
+  }
+}

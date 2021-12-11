@@ -1,0 +1,61 @@
+<!--
+ ______________________________________________________________________________
+/\                                                                             \
+\_|                                                                            |
+  |    _____         .__                      .__                              |
+  |   /  _  \   ____ |__| _____ _____    ____ |__| ____   ____   ____   ______ |
+  |  /  /_\  \ /    \|  |/     \\__  \ _/ ___\|  |/  _ \ /    \_/ __ \ /  ___/ |
+  | /    |    \   |  \  |  Y Y  \/ __ \\  \___|  (  <_> )   |  \  ___/ \___ \  |
+  | \____|__  /___|  /__|__|_|  (____  /\___  >__|\____/|___|  /\___  >____  > |
+  |         \/     \/         \/     \/     \/               \/     \/     \/  |
+  |  __________________________________________________________________________|_ 
+  \_/___________________________________________________________________________/
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones Web</title>
+    <style>
+        /* 
+             - Nombre de animación a activar: "girar"
+             - Tiempo empleado en cada ciclo de la animación: 5s
+             - Número de veces que se repite: infinite | número
+        */
+        .move {
+            animation: girar 5s infinite;
+        }
+
+        /* Especificación de la animación "girar" */
+        @keyframes girar {
+            from {
+                transform: translateX(0px);
+            }
+
+            to {
+                transform: translateX(800px) rotate(1080deg);
+                /* 3 giros-rotaciones sobre el elemento mismo hasta completar la animación: (3 * 360) */
+            }
+        }
+
+        .rueda {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #AACC33;
+            border: 5px solid;
+            border-color: blue red black yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rueda move"></div>
+</body>
+
+</html>

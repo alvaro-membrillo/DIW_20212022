@@ -1,0 +1,102 @@
+<!--
+ ______________________________________________________________________________
+/\                                                                             \
+\_|                                                                            |
+  |    _____         .__                      .__                              |
+  |   /  _  \   ____ |__| _____ _____    ____ |__| ____   ____   ____   ______ |
+  |  /  /_\  \ /    \|  |/     \\__  \ _/ ___\|  |/  _ \ /    \_/ __ \ /  ___/ |
+  | /    |    \   |  \  |  Y Y  \/ __ \\  \___|  (  <_> )   |  \  ___/ \___ \  |
+  | \____|__  /___|  /__|__|_|  (____  /\___  >__|\____/|___|  /\___  >____  > |
+  |         \/     \/         \/     \/     \/               \/     \/     \/  |
+  |  __________________________________________________________________________|_ 
+  \_/___________________________________________________________________________/
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones Web</title>
+    <style>
+        .slider ul.move {
+            animation: move 10s infinite alternate;
+            /* alternate: Al terminar un ciclo la animación invierte su dirección.
+            Los pasos de la animación se ejecutan al revés. */
+        }
+
+        @keyframes move {
+            0% {
+                margin-left: 0px;
+            }
+
+            20% {
+                margin-left: 0px;
+            }
+
+            25% {
+                margin-left: -100%;
+            }
+
+            45% {
+                margin-left: -100%;
+            }
+
+            50% {
+                margin-left: -200%;
+            }
+
+            70% {
+                margin-left: -200%;
+            }
+
+            75% {
+                margin-left: -300%;
+            }
+
+            100% {
+                margin-left: -300%;
+            }
+        }
+
+        * {
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+
+        .slider {
+            width: 70%;
+            overflow: hidden;
+        }
+
+        .slider ul {
+            display: flex;
+            width: 300%;
+        }
+
+        .slider li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <ul class="move">
+            <li>
+                <img src="img/monkey.jpg" alt="mono">
+            </li>
+            <li>
+                <img src="img/android.jpg" alt="android">
+            </li>
+            <li>
+                <img src="img/psicodelic.jpg" alt="psicodélico">
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
