@@ -1,0 +1,13 @@
+h1.title {
+  font: "Open Sass", sans-serif;
+  color: #f44336;
+}
+
+div.container {
+  color: #f44336;
+  background-color: #fff;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=ej4.css.map */

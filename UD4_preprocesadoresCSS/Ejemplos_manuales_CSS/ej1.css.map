@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EAEL,KAAK,EADG,GAAG;CAEX;;AAED,AAAA,QAAQ,CAAC;EACR,KAAK,EALG,GAAG;CAMX",
+    "sources": [
+        "ej1.scss"
+    ],
+    "names": [],
+    "file": "ej1.css"
+}

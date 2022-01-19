@@ -1,0 +1,21 @@
+$red: #f00;
+
+nav {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		$red: #0f0 !global;
+	}
+
+	li {
+		display: inline-block;
+		color: $red;
+	}
+
+	a {
+		display: block;
+		padding: 6px 12px;
+		text-decoration: none;
+	}
+}

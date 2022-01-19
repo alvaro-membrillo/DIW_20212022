@@ -1,0 +1,15 @@
+$predef: #f00;
+
+@mixin cuadrado($size, $color) {
+	width: $size;
+	height: $size;
+	background-color: $color;
+}
+
+.cuadrado-pequenio-azul {
+	@include cuadrado(20px, rgb(0, 0, 255));
+}
+
+.gran-cuadrado {
+	@include cuadrado(300px, $predef);
+}

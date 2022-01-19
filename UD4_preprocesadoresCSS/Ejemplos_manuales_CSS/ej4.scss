@@ -1,0 +1,14 @@
+$color: #f44336;
+$fondo: #fff;
+
+h1.title {
+	font: "Open Sass", sans-serif;
+	color: $color;
+}
+
+div.container {
+	color: $color;
+	background-color: $fondo;
+	width: 100%;
+	box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
