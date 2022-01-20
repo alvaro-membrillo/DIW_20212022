@@ -1,0 +1,25 @@
+$p: #0090b2;
+
+@mixin translucido($color) {
+	color: $color;
+	background-color: #fff;
+	opacity: 0.5;
+}
+
+.icono {
+	color: #0090b2;
+
+	&:hover {
+		color: $p;
+	}
+
+	&.special {
+		color: #00ceff;
+		&:hover {
+			@include translucido($p);
+		}
+		&:active {
+			color: #ff7a00;
+		}
+	}
+}

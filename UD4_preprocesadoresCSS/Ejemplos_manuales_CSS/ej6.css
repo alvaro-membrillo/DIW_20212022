@@ -1,0 +1,22 @@
+.icono {
+  color: #0090b2;
+}
+
+.icono:hover {
+  color: #0090b2;
+}
+
+.icono.special {
+  color: #00ceff;
+}
+
+.icono.special:hover {
+  color: #0090b2;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.icono.special:active {
+  color: #ff7a00;
+}
+/*# sourceMappingURL=ej6.css.map */
