@@ -1,0 +1,16 @@
+$green: #33d374;
+$blue: blue;
+$white: #ffffff;
+
+div {
+	background: $green;
+	margin: 0 auto;
+	padding: 20px;
+
+	& h1 {
+		color: $blue;
+	}
+	li {
+		color: $white;
+	}
+}

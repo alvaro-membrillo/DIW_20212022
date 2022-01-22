@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,GAAG,CAAC;EACH,UAAU,EALH,OAAO;EAMd,MAAM,EAAE,MAAM;EACd,OAAO,EAAE,IAAI;CAQb;;AAXD,AAKC,GALE,CAKA,EAAE,CAAC;EACJ,KAAK,EATA,IAAI;CAUT;;AAPF,AAQC,GARE,CAQF,EAAE,CAAC;EACF,KAAK,EAXC,OAAO;CAYb",
+    "sources": [
+        "ej_niveles.scss"
+    ],
+    "names": [],
+    "file": "ej_niveles.css"
+}
