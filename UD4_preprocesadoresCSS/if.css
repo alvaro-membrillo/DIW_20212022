@@ -1,0 +1,16 @@
+.main-module {
+  background-color: #f00;
+}
+
+@media (min-width: 768px) {
+  .main-module {
+    background-color: #00ffff;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-module {
+    background-color: #ffffff;
+  }
+}
+/*# sourceMappingURL=if.css.map */
