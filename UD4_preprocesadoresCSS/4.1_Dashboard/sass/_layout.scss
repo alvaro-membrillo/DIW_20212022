@@ -1,13 +1,10 @@
-$colorFondo: #939393;
-$colorLetras: white;
-
 * {
 	font-family: "Roboto", sans-serif;
 }
 
 body {
 	margin: 0;
-	height: 100%;
+	//height: 100%;
 	display: flex;
 	flex-direction: column;
 
@@ -35,9 +32,23 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: space-around;
 
-			span {
-				font-size: 500px;
+			div {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 20%;
+
+				&:hover {
+					background-color: blue;
+				}
+
+				span {
+					font-size: 300px;
+				}
 			}
 		}
 
@@ -55,43 +66,14 @@ body {
 				background-color: white;
 				display: flex;
 				align-items: center;
-				padding: 0 70px 0 70px;
+				justify-content: center;
 				box-shadow: 0 2px 2px rgb(94, 94, 94);
 				border-radius: 30px;
-			}
-
-			.graph1 {
-				grid-area: graph1;
-			}
-			.graph2 {
-				grid-area: graph2;
-			}
-			.graph3 {
-				grid-area: graph3;
-				color: purple;
-				font-size: 90px;
-			}
-			.graph4 {
-				grid-area: graph4;
-				font-size: 90px;
-				justify-content: flex-end;
-			}
-			.graph5 {
-				grid-area: graph5;
-				color: red;
-				font-size: 90px;
-			}
-			.graph6 {
-				grid-area: graph6;
-				font-size: 90px;
-				justify-content: flex-end;
 			}
 		}
 	}
 
 	footer {
-		position: absolute;
-		bottom: 0;
 		height: 45px;
 		width: 100%;
 		font-size: 15px;

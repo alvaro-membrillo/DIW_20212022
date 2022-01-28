@@ -1,0 +1,25 @@
+@mixin generarGraph($gridArea, $fontSize) {
+	grid-area: $gridArea;
+	font-size: $fontSize;
+}
+
+.graph1 {
+	@include generarGraph(graph1, null);
+}
+.graph2 {
+	@include generarGraph(graph2, null);
+}
+.graph3 {
+	@include generarGraph(graph3, 90px);
+	color: purple;
+}
+.graph4 {
+	@include generarGraph(graph4, 90px);
+}
+.graph5 {
+	@include generarGraph(graph5, 90px);
+	color: red;
+}
+.graph6 {
+	@include generarGraph(graph6, 90px);
+}
