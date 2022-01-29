@@ -121,6 +121,15 @@ body footer {
 		}*/
 }
 
+@media (max-width: 360px) {
+  #barra {
+    display: none;
+  }
+  .contenido {
+        grid-template-areas: "graph3 graph3" "graph5 graph5" "graph5";
+  }
+}
+
 .graph1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
