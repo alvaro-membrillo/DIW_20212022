@@ -1,0 +1,22 @@
+{
+  "name": "4.2_componentessass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css",
+    "sassdoc": "sassdoc scss -d sassdocs",
+    "build": "npm run css && webpack --config webpack.prod.js",
+    "css-compile": "node-sass --include-path node_modules --output-style compressed -- source-map true --source-map-contents true --precision 6 assets/src/scss -o assets/dist/css/",
+    "css-prefix": "postcss --replace assets/dist/css/styles.css --use autoprefixer --map",
+    "css": "npm run css-compile && npm run css-prefix",
+    "watch": "nodemon -e scss -x \"npm run css && webpack --config webpack.dev.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "sassdoc": "^2.7.3"
+  }
+}

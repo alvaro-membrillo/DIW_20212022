@@ -1,0 +1,51 @@
+////
+/// Ejercicio gallery.scss
+/// @author Alvaro Membrillo
+/// @since 1.0
+////
+
+$MAX_COLUMNS: 4 !default;
+$RESPONSIVE_COLUMNS: (
+	1024px: 3,
+	768px: 2,
+	480px: 1,
+);
+
+/// función que recibe un parámetro y ajusta la distribucion de las columnas del grid
+/// @param {Number} $n
+/// @return {Number} valor que define la distribución entre columnas
+@function grid_columns($n) {
+	@if ($n > 0) {
+		@return ((100 / $n)) * 1%;
+	} @else {
+		@return 0;
+	}
+}
+
+/// funcion mixin que redimensiona las imagenes de la galería según el parámetro que recibe
+/// @param {Number} $n
+@mixin resize($n) {
+	.gallery img {
+		width: grid_columns($n);
+	}
+}
+
+body {
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+.gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+
+@include resize($MAX_COLUMNS);
+
+@each $size, $value in $RESPONSIVE_COLUMNS {
+	@media (max-width: $size) {
+		@include resize($value);
+	}
+}
