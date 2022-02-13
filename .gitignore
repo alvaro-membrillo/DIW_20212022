@@ -1,1 +1,6 @@
-.zip
+*.zip
+
+.sass-cache
+UD4_preprocesadoresCSS/4.2_ComponentesSASS/css
+UD4_preprocesadoresCSS/4.2_ComponentesSASS/sassdocs
+UD4_preprocesadoresCSS/4.2_ComponentesSASS/node_modules
