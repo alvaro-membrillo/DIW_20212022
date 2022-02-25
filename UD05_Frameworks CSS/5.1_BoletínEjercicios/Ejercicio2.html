@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			h1 {
+				color: white;
+				/*margin: 0 !important;*/
+			}
+
+			nav {
+				background: linear-gradient(to right, blue, #fff);
+			}
+
+			.gestor {
+				height: 200px;
+				padding: 50px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+			}
+
+			.carta {
+				display: flex;
+				height: 350px;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.carta img {
+				width: 200px;
+			}
+			.carta p {
+				font-size: 1.4rem;
+			}
+		</style>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</head>
+	<body>
+		<div class="container-flex blue">
+			<nav>
+				<div class="nav-wrapper">
+					<a href="#" class="brand-logo">Contactos</a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><i class="material-icons blue-text">home</i></li>
+						<li>
+							<i class="material-icons blue-text">format_list_bulleted</i>
+						</li>
+						<li><i class="material-icons blue-text">help</i></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="row center">
+				<div class="col s3">
+					<i class="large material-icons">account_box</i>
+					<ul>
+						<li>Paquito</li>
+						<li>Anita</li>
+						<li>Roxana</li>
+						<li>Patricio</li>
+						<li>Ramon</li>
+						<li>Jose</li>
+						<li>Antonio</li>
+						<li>Paula</li>
+						<li>Pablo</li>
+					</ul>
+				</div>
+				<div class="col s6 green">
+					<div class="carta card red col m6">
+						<img class="black circle" src="./img/contact.png" alt="" />
+						<p class="white-text">Paquito</p>
+					</div>
+					<div class="carta card purple col m6">
+						<img
+							class="responsive-image black circle"
+							src="./img/contact.png"
+							alt=""
+						/>
+						<p class="white-text">Anita</p>
+					</div>
+					<div class="carta card blue darken-4 col m6">
+						<img class="black circle" src="./img/contact.png" alt="" />
+						<p class="white-text">Roxana</p>
+					</div>
+					<div class="carta card green darken-3 col m6">
+						<img class="black circle" src="./img/contact.png" alt="" />
+						<p class="white-text">Patricio</p>
+					</div>
+				</div>
+				<div class="col s3">
+					<i class="large material-icons">people</i>
+					<div class="gestor yellow lighten-2">
+						<i class="small material-icons">group_add</i>
+						<p>Los Rebeldes</p>
+						<div>
+							<a href="">Agregar</a>
+							<a href="">Eliminar</a>
+						</div>
+					</div>
+					<br />
+					<div class="gestor yellow lighten-2">
+						<i class="small material-icons">group_add</i>
+						<p>Los Boludos</p>
+						<div>
+							<a href="">Agregar</a>
+							<a href="">Eliminar</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

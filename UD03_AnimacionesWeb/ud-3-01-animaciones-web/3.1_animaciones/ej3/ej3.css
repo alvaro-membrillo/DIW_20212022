@@ -1,0 +1,128 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+h1 {
+	color: red;
+	animation: doom 0.5s infinite alternate-reverse;
+	border: 1px solid red;
+	text-align: center;
+	text-shadow: 0 0 1rem red;
+}
+
+@keyframes doom {
+	to {
+		color: orange;
+		text-shadow: 0 0 1rem orange;
+	}
+}
+
+.bar {
+	width: 75%;
+	height: 1.5rem;
+	background-color: grey;
+	margin: 0 auto;
+}
+
+.loading {
+	background-color: blue;
+	height: 1.5rem;
+	animation: loading 5s infinite;
+	text-align: right;
+	font-weight: bold;
+}
+
+@keyframes loading {
+	from {
+		width: 0%;
+	}
+
+	25% {
+		width: 25%;
+	}
+
+	50% {
+		width: 50%;
+	}
+
+	75% {
+		width: 75%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+.loading::before {
+	content: "0%";
+	animation: loadingNumber 5s infinite;
+}
+
+@keyframes loadingNumber {
+	25% {
+		width: 25%;
+		content: "25%";
+		color: red;
+	}
+
+	50% {
+		width: 50%;
+		content: "50%";
+		color: orange;
+	}
+
+	75% {
+		width: 75%;
+		content: "75%";
+		color: yellowgreen;
+	}
+
+	100% {
+		width: 100%;
+		content: "100%";
+		color: green;
+	}
+}
+
+.images {
+	text-align: center;
+}
+
+img:nth-child(3) {
+	width: 18rem;
+}
+
+img:last-child {
+	width: 12rem;
+	padding-bottom: 3rem;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 1rem;
+	}
+
+	.images img:first-child {
+		display: none;
+	}
+
+	.images img:nth-child(2) {
+		width: 12rem;
+	}
+
+	.images img:nth-child(3) {
+		display: none;
+	}
+
+	.images img:last-child {
+		width: 8rem;
+	}
+}

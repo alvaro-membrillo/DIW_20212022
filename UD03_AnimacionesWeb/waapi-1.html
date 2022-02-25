@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Animations API</title>
+    <style>
+      body {
+        margin: 2rem;
+      }
+
+      #cube {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        /*animation: rotacion 1s infinite;*/
+      }
+
+      /* 
+@keyframes rotacion{
+  0%{
+    transform: rotate(0deg);
+  }
+  30%{
+    background-color: purple;
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+} */
+    </style>
+  </head>
+
+  <body>
+    <div id="cube"></div>
+
+    <script>
+      var keyframes = [
+        { transform: "rotate(0deg)", backgroundColor: "yellow" },
+        { backgroundColor: "red", offset: 0.3 },
+        { transform: "rotate(180deg)", backgroundColor: "yellow" },
+      ];
+
+      var params = {
+        duration: 1000,
+        iterations: Infinity,
+      };
+
+      var cubeAnimation = document
+        .getElementById("cube")
+        .animate(keyframes, params);
+
+      var cubo = document.getelementById("cubo");
+      cubo.animate(keyframes, params);
+
+      // ---------------------------------------------
+
+      /* Sintaxis alternativa (I)
+        
+        document.getElementById('cube').animate(
+          [
+            {transform: 'rotate(0deg)', backgroundColor: 'yellow'},
+            {backgroundColor: 'red', offset:0.3},
+            {transform: 'rotate(180deg)', backgroundColor: 'yellow'}
+          ], {
+            duration: 1000,
+            iterations: Infinity
+          }
+        )
+        */
+
+      // --------------------------------------------
+
+      /* Sintaxis alternativa (II)
+        
+        document.getElementById('cube').animate(
+          [
+            {transform: 'rotate(0deg)', backgroundColor: 'yellow'},
+            {backgroundColor: 'red', offset:0.3},
+            {transform: 'rotate(180deg)', backgroundColor: 'yellow'}
+          ], 1000)
+        */
+    </script>
+  </body>
+</html>

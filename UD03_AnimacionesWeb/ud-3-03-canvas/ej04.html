@@ -1,0 +1,67 @@
+<!--
+ ______________________________________________________________________________
+/\                                                                             \
+\_|                                                                            |
+  |    _____         .__                      .__                              |
+  |   /  _  \   ____ |__| _____ _____    ____ |__| ____   ____   ____   ______ |
+  |  /  /_\  \ /    \|  |/     \\__  \ _/ ___\|  |/  _ \ /    \_/ __ \ /  ___/ |
+  | /    |    \   |  \  |  Y Y  \/ __ \\  \___|  (  <_> )   |  \  ___/ \___ \  |
+  | \____|__  /___|  /__|__|_|  (____  /\___  >__|\____/|___|  /\___  >____  > |
+  |         \/     \/         \/     \/     \/               \/     \/     \/  |
+  |  __________________________________________________________________________|_ 
+  \_/___________________________________________________________________________/
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones Web</title>
+    <script>
+        function cargaContextoCanvas(idCanvas) {
+            var contexto = false, elemento = document.getElementById(idCanvas);
+            if (elemento && elemento.getContext)
+                contexto = elemento.getContext('2d');
+
+            return contexto;
+        }
+
+        window.onload = function () {
+            var contexto = cargaContextoCanvas('canvas1');
+            if (contexto) {
+                //Accedo al contexto de '2d' de este canvas, necesario para dibujar
+                contexto.beginPath();
+                contexto.moveTo(20, 10);
+                contexto.lineTo(32, 20);
+                contexto.lineTo(22, 20);
+                contexto.lineTo(22, 35);
+                contexto.lineTo(17, 35);
+                contexto.lineTo(17, 20);
+                contexto.lineTo(7, 20);
+                contexto.fillStyle = '#D97DFF';
+                //contexto.closePath(); opcional antes de un fill()
+                contexto.fill();
+                //creo un segundo camino
+                contexto.beginPath(); //probar a comentar esta línea para ver lo que pasa
+                contexto.fillStyle = '#FDEE73';
+                contexto.moveTo(47, 50);
+                contexto.lineTo(67, 70);
+                contexto.lineTo(67, 30);
+                contexto.closePath();
+                contexto.fill();
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas1" height="200" width="200">
+        Tu navegador no sirve
+    </canvas>
+</body>
+
+</html>

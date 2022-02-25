@@ -1,0 +1,67 @@
+<!--
+ ______________________________________________________________________________
+/\                                                                             \
+\_|                                                                            |
+  |    _____         .__                      .__                              |
+  |   /  _  \   ____ |__| _____ _____    ____ |__| ____   ____   ____   ______ |
+  |  /  /_\  \ /    \|  |/     \\__  \ _/ ___\|  |/  _ \ /    \_/ __ \ /  ___/ |
+  | /    |    \   |  \  |  Y Y  \/ __ \\  \___|  (  <_> )   |  \  ___/ \___ \  |
+  | \____|__  /___|  /__|__|_|  (____  /\___  >__|\____/|___|  /\___  >____  > |
+  |         \/     \/         \/     \/     \/               \/     \/     \/  |
+  |  __________________________________________________________________________|_ 
+  \_/___________________________________________________________________________/
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones Web</title>
+    <style>
+        .move {
+            color: white;
+            animation: separar 8s infinite;
+        }
+
+        /* Especificación de la animación "separar" con diferentes estados */
+        @keyframes separar {
+            0% {
+                letter-spacing: -17px;
+                opacity: 0;
+            }
+
+            30% {
+                letter-spacing: 2px;
+                opacity: 0.5;
+                text-shadow: 0 0 12px green;
+            }
+
+            100% {
+                letter-spacing: 4px;
+                opacity: 1;
+                transform: scale(2, 2);
+				text-shadow: 0px 0px 12px #777;
+            }
+        }
+
+        * {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        body {
+            margin-top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="move">Animaciones Web</h1>
+</body>
+
+</html>

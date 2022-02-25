@@ -1,0 +1,188 @@
+<!--
+ ______________________________________________________________________________
+/\                                                                             \
+\_|                                                                            |
+  |    _____         .__                      .__                              |
+  |   /  _  \   ____ |__| _____ _____    ____ |__| ____   ____   ____   ______ |
+  |  /  /_\  \ /    \|  |/     \\__  \ _/ ___\|  |/  _ \ /    \_/ __ \ /  ___/ |
+  | /    |    \   |  \  |  Y Y  \/ __ \\  \___|  (  <_> )   |  \  ___/ \___ \  |
+  | \____|__  /___|  /__|__|_|  (____  /\___  >__|\____/|___|  /\___  >____  > |
+  |         \/     \/         \/     \/     \/               \/     \/     \/  |
+  |  __________________________________________________________________________|_ 
+  \_/___________________________________________________________________________/
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones Web</title>
+    <style>
+        #marco {
+            animation: girar 10s 1 linear;
+        }
+
+        #marco #myang,
+        #marco #myin {
+            animation: caer 10s linear;
+        }
+
+        @keyframes girar {
+            0% {
+                transform: scale(0.0) rotate(0deg);
+            }
+
+            10% {
+                transform: scale(0.5) rotate(360deg);
+            }
+
+            20% {
+                transform: scale(0.8) rotate(720deg);
+            }
+
+            30% {
+                transform: scale(1.0) rotate(1080deg);
+            }
+
+            40% {
+                transform: scale(1.5) rotate(1440deg);
+            }
+
+            50% {
+                transform: scale(2.0) rotate(1800deg);
+            }
+
+            60% {
+                transform: scale(1.5) rotate(2160deg);
+            }
+
+            70% {
+                transform: scale(1.0) rotate(2520deg);
+            }
+
+            80% {
+                transform: scale(1.0) rotate(2880deg);
+            }
+
+            90% {
+                transform: scale(1.0) rotate(3240deg);
+            }
+
+            100% {
+                transform: scale(1.0) rotate(3600deg);
+            }
+
+        }
+
+        @keyframes caer {
+            0% {
+                transform: translateX(40px);
+            }
+
+            50% {
+                transform: translateX(-10px);
+                width: 30px;
+                height: 30px;
+            }
+
+            100% {
+                transform: translateX(40px);
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        #marco {
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+            box-shadow: 1px 0px 20px #666;
+        }
+
+        #fondoyin,
+        #fondoyang {
+            float: left;
+            display: block;
+            height: 100%;
+            width: 50%;
+        }
+
+        #fondoyin {
+            background: #000;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+
+        #fondoyang {
+            background: #fff;
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+
+        }
+
+        #yin {
+            background: #000;
+            height: 100px;
+            position: absolute;
+            top: 0px;
+            left: 50px;
+            width: 100px;
+            border-radius: 100px;
+        }
+
+        #yang {
+            background: #fff;
+            height: 100px;
+            position: absolute;
+            bottom: 0px;
+            left: 50px;
+            width: 100px;
+            border-radius: 100px;
+        }
+
+        #myin {
+            background: #000;
+            height: 20px;
+            margin: 0 auto;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 20px;
+            border-radius: 50px;
+        }
+
+        #myang {
+            background: #fff;
+            height: 20px;
+            margin: 0 auto;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 20px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="marco">
+        <div id="fondoyin">
+            <div id="yin">
+                <div id="myang"></div>
+            </div>
+        </div>
+        <div id="fondoyang">
+            <div id="yang">
+                <div id="myin"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
