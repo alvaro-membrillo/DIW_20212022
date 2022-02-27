@@ -1,173 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+<html>
 
-		<!-- Compiled and minified CSS -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-		/>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pestañas</title>
+	<meta charset="utf-8">
+	<meta name="description" content="https://materializecss.com/tabs.html" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
-		<!-- Compiled and minified JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<style>
-			.collapsible-body {
-				flex-direction: column;
-				justify-content: center;
-			}
-			.collapsible-body div {
-				background: linear-gradient(to right, rgb(255, 211, 129), #fff);
-				height: 60px;
-				align-items: center;
-				padding: 15px;
-				box-shadow: 0px 4px 8px 1px gray;
-			}
-		</style>
-		<script>
-			function showToast(message) {
-				M.toast({ html: message }, 1000);
-			}
-		</script>
-	</head>
+	<script>
+		function showToast(message) {
+			M.toast({ html: message }, 2000);
+		}
+	</script>
+    <style>
+        .card2{
+            background: linear-gradient(to right, #ffb84e , #fff);
+        }
+        .card-title {
+			color: black;
+		}
+		.card-content {
+			color: gray;
+		}
+		.titulo {
+			background-color: rgb(0,0,0, 0.5);
+		}
+    </style>
+</head>
 
-	<body>
-		<div class="container-fluid">
+<body>
+	<div class="row">
+		<!-- PESTAÑAS -->
+		<ul class="tabs orange">
+			<li class="tab col s4">
+				<a class = "white-text" href="#tab-1" onclick="showToast('Rercords');">
+					<i class="tiny material-icons white-text">calendar_today</i>
+					RECORDS
+				</a>
+			</li>
+
+            <li class="tab col s4">
+				<a class = "white-text" href="#tab-2" onclick="showToast('Noticias');">
+					<i class="tiny material-icons white-text">alarm</i>
+					NOTICIAS
+				</a>
+			</li>
+
+			<li class="tab col s4 ">
+				<a class = "white-text" href="#tab-3" onclick="showToast('Apps');">
+					<i class="tiny material-icons white-text">settings</i>
+					APPS
+				</a>
+			</li>
+		</ul>
+
+		<!-- RECORDS -->
+		<div id="tab-1" class="col s12">
 			<div class="row">
-				<ul class="tabs orange lighten-1">
-					<li class="tab col s4">
-						<a href="#tab-1" class="white-text" onclick="showToast('Records');">
-							<i class="tiny material-icons">calendar_today RECORDS</i>
-						</a>
-					</li>
-					<li class="tab col s4">
-						<a
-							href="#tab-2"
-							class="white-text"
-							onclick="showToast('Noticias');"
-						>
-							<i class="tiny material-icons">access_alarm NOTICIAS</i>
-						</a>
-					</li>
-					<li class="tab col s4">
-						<a href="#tab-3" class="white-text" onclick="showToast('Apps');">
-							<i class="tiny material-icons">settings APPS</i>
-						</a>
-					</li>
-				</ul>
+				<div class="col s12">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="center teal-text">Participante</th>
+                                <th class="center teal-text">Apuesta</th>
+                                <th class="center teal-text">Ganado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="center">Mandragora</td>
+                                <td class="center">10.00€</td>
+                                <td class="center"><i class="tiny material-icons orange-text">check_circle</i></td>
+                            </tr>
+                            <tr>
+                                <td class="center">Vesubio</td>
+                                <td class="center">20.35€</td>
+                                <td class="center"><i class="tiny material-icons orange-text"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="center">Irpano</td>
+                                <td class="center">15.40€</td>
+                                <td class="center"><i class="tiny material-icons orange-text">check_circle</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+				</div>
 			</div>
 		</div>
 
-		<div id="#tab-1" class="col s12">
-			<table>
-				<tr>
-					<th>Participante</th>
-					<th>Apuesta</th>
-					<th>Ganado</th>
-				</tr>
+        <!-- NOTICIAS -->
+		<div id="tab-2" class="col s12">
+			<div class="row">
+				<div class="col s12">
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Local</div>
+                            <div class="collapsible-body">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
 
-				<tr>
-					<td>Mandragora</td>
-					<td>10.00€</td>
-					<td>
-						<i class="tiny material-icons orange-text">check_circle</i>
-					</td>
-				</tr>
-				<tr>
-					<td>Vesubio</td>
-					<td>20.35€</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Irpano</td>
-					<td>15.40€</td>
-					<td>
-						<i class="tiny material-icons orange-text">check_circle</i>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div id="#tab-2" class="col s12">
-			<div class="container">
-				<ul class="collapsible">
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">chevron_right</i>Local
-						</div>
-						<div class="collapsible-body">
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-						</div>
-					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">chevron_right</i>Sucesos
-						</div>
-						<div class="collapsible-body">
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-						</div>
-					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">chevron_right</i>Política
-						</div>
-						<div class="collapsible-body">
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-						</div>
-					</li>
-				</ul>
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Sucesos</div>
+                            <div class="collapsible-body">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Politica</div>
+                            <div class="collapsible-body">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Noticias</div>
+                            <div class="collapsible-body">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="card orange lighten-4">
+                                            <div class="card-content blue-grey-text darken-4 card2">
+                                                <span class="card-title"><i class="material-icons">error</i> Item</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+				</div>
 			</div>
 		</div>
-		<div id="#tab-3" class="col s12">
-			<div class="container">
-				<ul class="collapsible">
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">chevron_right</i>Local
-						</div>
-						<div class="collapsible-body">
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-						</div>
-					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">chevron_right</i>Sucesos
-						</div>
-						<div class="collapsible-body">
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-						</div>
-					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">chevron_right</i>Política
-						</div>
-						<div class="collapsible-body">
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-							<div class="row"><i class="material-icons">info</i>Item</div>
-						</div>
-					</li>
-				</ul>
+
+		<!-- APPS -->
+		<div id="tab-3" class="col s12">
+			<div class="col s6 m4">
+				<div class="card">
+                    <div class="card-image">
+                        <img class = "responsive-img" src="img/tetris.png" />
+                        <div class=""></div>
+                        <span class="card-title col s12 titulo">Tetris</span>
+                    </div>
+                    <div class="card-content">
+                        <p>El clásico de siempre.</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="orange-text">+1 VOTO</p>
+                        <p>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons ">star</i>
+                            <i class="tiny material-icons ">star</i>
+                        </p>
+                    </div>
+                </div>
+			</div>
+            <div class="col s6 m4">
+				<div class="card">
+                    <div class="card-image">
+                        <img class = "responsive-img" src="img/cards.png" />
+                        <div class=""></div>
+                        <span class="card-title col s12 titulo">Solitario</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Juego de cartas para estar solo</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="orange-text">+1 VOTO</p>
+                        <p>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons ">star</i>
+                            <i class="tiny material-icons ">star</i>
+                            <i class="tiny material-icons ">star</i>
+                            <i class="tiny material-icons ">star</i>
+                        </p>
+                    </div>
+                </div>
+			</div>
+            <div class="col s6 m4">
+				<div class="card">
+                    <div class="card-image">
+                        <img class = "responsive-img" src="img/arcade.png" />
+                        <div class=""></div>
+                        <span class="card-title col s12 titulo">24 Arcade games</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Muchos juegos de arcade</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="orange-text">+1 VOTO</p>
+                        <p>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons ">star</i>
+                            <i class="tiny material-icons ">star</i>
+                        </p>
+                    </div>
+                </div>
+			</div>
+            <div class="col s6 m4">
+				<div class="card">
+                    <div class="card-image">
+                        <img class = "responsive-img" src="img/dados.png" />
+                        <div class=""></div>
+                        <span class="card-title col s12 titulo">Kiriki</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Juego vasco de dados</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="orange-text">+1 VOTO</p>
+                        <p>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons ">star</i>
+                        </p>
+                    </div>
+                </div>
+			</div>
+            <div class="col s6 m4">
+				<div class="card">
+                    <div class="card-image">
+                        <img class = "responsive-img" src="img/flight.png" />
+                        <div class=""></div>
+                        <span class="card-title col s12 titulo">Fligth simulator</span>
+                    </div>
+                    <div class="card-content">
+                        <p>El simulador de vuelo</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="orange-text">+1 VOTO</p>
+                        <p>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons ">star</i>
+                            <i class="tiny material-icons ">star</i>
+                            <i class="tiny material-icons ">star</i>
+                        </p>
+                    </div>
+                </div>
+			</div>
+            <div class="col s6 m4">
+				<div class="card">
+                    <div class="card-image">
+                        <img class = "responsive-img" src="img/puzzle.png" />
+                        <div class=""></div>
+                        <span class="card-title col s12 titulo">Puzzlemania</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Aprender a puzzlear</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="orange-text">+1 VOTO</p>
+                        <p>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons yellow-text">star</i>
+                            <i class="tiny material-icons ">star</i>
+                            <i class="tiny material-icons ">star</i></p>
+                    </div>
+                </div>
 			</div>
 		</div>
+        
+	</div>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.tabs').tabs();
+		});
+        $(document).ready(function(){
+            $('.collapsible').collapsible();
+        });
+	</script>
+</body>
 
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				var collapse = document.querySelectorAll(".collapsible");
-				M.Collapsible.init(collapse);
-			});
-		</script>
-	</body>
 </html>
